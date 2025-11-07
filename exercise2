@@ -1,0 +1,15 @@
+The 2010’s benchmark and optimization is coming to an end, so it’s a good time to share what we’ve been working on over the last few months.
+
+One of the main updates is an **EE-only feature**: a new **Ehcache** cluster replication mechanism. Since this feature is available exclusively in the Enterprise Edition, I won’t talk about implementation details. Instead, I’ll share a bit about the problem and how we solved it.
+
+By default, **Ehcache** uses an **RMI replication mechanism**, which is a point-to-point communication model where each node sends the same N-1 events to every other node. This approach doesn’t scale well in large clusters: as N grows, network traffic increases exponentially. Things get even worse when you look at how threads are managed.
+
+**Ehcache** creates one replication thread per cache entity. In large systems like **Liferay Portal**, it’s common to have over a hundred cache entities, which means a hundred or more replication threads. Threads are expensive, they consume memory and CPU resources even when inactive. Considering that each thread stack typically takes around 2 MB, that’s already over 200 MB per node. If you include heap memory usage, this number could reach up to 500 MB (and that’s just for one node!). Even though memory is cheap today, wasting it isn’t a good idea, and a large number of threads also increases context-switching overhead.
+
+To fix both the 1-to-N-1 communication overhead and the massive thread count, we leveraged **ClusterLink**, Liferay’s abstraction for cluster communication. Its default implementation uses **JGroups UDP** multicast, which solves the point-to-point communication problem.
+
+We also replaced per-cache replication threads with a small pool of dispatcher threads dedicated to delivering cache events to remote peers. Since all cache events now go through a single channel, we can coalesce multiple updates to the same cache entry when they happen close together, reducing redundant network traffic.
+
+_(Newer versions of **Ehcache** support a **JGroups** replicator too, which helps with the network issue but not with thread reduction or coalescing.)_
+
+This feature is available to **Enterprise Edition** customers. If you’re interested, contact our support engineers for more details.
