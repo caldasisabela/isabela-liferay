@@ -52,6 +52,7 @@ Rewrite, correct, and condense a technical post that was originally confusing, i
 - According to a **grammar check** tool, the final version showed a **136% improvement** in grammar, fluency, and clarity combined.
 
 The result is a clear, concise, and technically accurate text that effectively communicates the optimization process while maintaining a professional tone consistent with enterprise-level.
+##
 
 ### [Exercise 3 | Javadoc](https://github.com/caldasisabela/isabela-liferay/blob/main/exercise3-isabelacaldas.md)
 
