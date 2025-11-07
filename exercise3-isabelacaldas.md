@@ -1,3 +1,4 @@
+<pre>
 /**
  * Inserts a substring into a base string at the specified position.
  * If the base string is {@code null}, this method returns the string "null".
@@ -11,3 +12,4 @@
 public static String insert(String s, String insert, int offset) {
     ...
 }
+</pre>
