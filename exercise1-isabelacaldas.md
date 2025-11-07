@@ -60,6 +60,7 @@ Recording allows you to save a TV program while it is airing and watch it later.
 
 #### Additional recording options
 
-- **Schedule a future recording** — You can select a program that has not started yet and set it to record automatically.  
-- **Record while watching live TV** — Press the **Record** button at any time during a live broadcast to start recording instantly.  
-- **Access saved recordings later** — Open the **Recorded Shows** or **Library** menu to view saved content.  
+- **Schedule a future recording** - You can select a program that has not started yet and set it to record automatically.  
+- **Record while watching live TV** - Press the **Record** button at any time during a live broadcast to start recording instantly.  
+- **Access saved recordings later** - Open the **Recorded Shows** or **Library** menu to view saved content.  
+
