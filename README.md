@@ -3,7 +3,7 @@
 I’ve worked as a UX Writer for four years, and I’m currently applying for the **Associate Technical Writer** position at Liferay. In this space, I’ll share a bit about my process while completing the three exercises you suggested.
 #
 
-### Exercise 1 | The DVR Manual
+### [Exercise 1 | The DVR Manual](https://github.com/caldasisabela/isabela-liferay/blob/main/exercise1-isabelacaldas.md)
 
 #### Objective:
 
@@ -34,7 +34,7 @@ Create a clear tutorial with an introduction and two sections (Playback and Reco
 The final result is a tutorial that fulfills both pedagogical and technical functions, resembling a real mini user manual.
 ##
 
-### Exercise 2 | Wordsmithing
+### [Exercise 2 | Wordsmithing](https://github.com/caldasisabela/isabela-liferay/blob/main/exercise2-isabelacaldas.md)
 
 #### Objective:
 Rewrite, correct, and condense a technical post that was originally confusing, improving its clarity, tone, and technical accuracy.
@@ -53,7 +53,7 @@ Rewrite, correct, and condense a technical post that was originally confusing, i
 
 The result is a clear, concise, and technically accurate text that effectively communicates the optimization process while maintaining a professional tone consistent with enterprise-level.
 
-### Exercise 3 | Javadoc
+### [Exercise 3 | Javadoc](https://github.com/caldasisabela/isabela-liferay/blob/main/exercise3-isabelacaldas.md)
 
 #### Objective:
 Write the Javadoc for the _insert(...)_ method, following the Liferay Javadoc Guidelines.
